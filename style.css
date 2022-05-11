@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,200;8..144,400;8..144,600&display=swap');
+
+
+html {
+	box-sizing: border-box;
+    font-family: 'Roboto Flex', sans-serif;
+}
+
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+
+body {
+	margin: 0;
+}
+
+/**-------TYPOS-------------**/
+
+h1, h2, h3 {
+    margin: 0;
+}
+
+h1 {
+    font-size: 3.5em;
+    font-weight: 600;
+}
+
+h2 {
+    font-size: 2.8em;
+}
+
+h3 {
+    font-size: 2em;
+}
+
+/**-------CONTAINER----------**/
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+}
+ 
+/**-------NAV--------------**/
+
+nav {
+    background-color: darkgray;
+    width: 100%;
+}
+
+nav .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+    margin-left: 2rem;
+}
+nav a:focus, nav a:hover {
+    color: white;
+}
+
+/**-----------HEADER---------**/
+
+#sobre  {
+    justify-content: center;
+    position: relative;
+}
+
+#sobre img {
+    width: 250px;
+    border-radius: 50%;
+    position: relative;
+    top: -120px;
+    z-index: 200;
+}
+
+#sobre {
+    display: flex;
+}
+
+#sobre .sobre-info {
+    max-width: 400px;
+    margin-left: 3rem;
+}
+
+#back-header {
+    background: linear-gradient(rgb(0,0,0, 0.2),rgba(0,0,0, 0.3)), url('https://images.unsplash.com/photo-1488188840666-e2308741a62f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=874&q=80') fixed;
+	height: 40vh;
+	background-size: cover;
+	background-position: center;
+}
+
+.icons-header {
+    display: flex;
+    place-content: space-around;
+    width: 100%;
+    font-size: 40px;
+    margin-top: -180px;
+    z-index: 1;
+}
