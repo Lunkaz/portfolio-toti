@@ -64,17 +64,18 @@ nav a:focus, nav a:hover {
 
 /**-----------HEADER---------**/
 
+header {
+    min-height: 100vh;
+}
+
 #sobre  {
     justify-content: center;
-    position: relative;
 }
 
 #sobre img {
     width: 250px;
     border-radius: 50%;
-    position: relative;
-    top: -120px;
-    z-index: 200;
+    margin-top: 140px;
 }
 
 #sobre {
@@ -83,14 +84,29 @@ nav a:focus, nav a:hover {
 
 #sobre .sobre-info {
     max-width: 400px;
+    margin-top: 260px;
     margin-left: 3rem;
+}
+
+#sobre h3 {
+    font-style: italic;
+    font-weight: 200;
+}
+
+#sobre h2 {
+    font-weight: 600;
+    padding-top: 40px;
+}
+
+#sobre p {
+    padding: 20px 0 60px;
 }
 
 #back-header {
     background: linear-gradient(rgb(0,0,0, 0.2),rgba(0,0,0, 0.3)), url('https://images.unsplash.com/photo-1488188840666-e2308741a62f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=874&q=80') fixed;
-	height: 40vh;
+	height: 260px;
 	background-size: cover;
-	background-position: center;
+	background-position: bottom;
 }
 
 .icons-header {
@@ -98,6 +114,47 @@ nav a:focus, nav a:hover {
     place-content: space-around;
     width: 100%;
     font-size: 40px;
-    margin-top: -180px;
-    z-index: 1;
+    margin-top: -40px;
+    text-decoration: none;
 }
+
+/**--------------FORMAÇÂO E EXPE------ **/
+
+#formacao {
+    background: yellow;
+    padding: 50px 0;
+}
+
+#experiencia {
+    background: green;
+    padding: 40px 0;
+}
+
+.main-info-single {
+    display: flex;
+    margin: 1.5rem 0;
+}
+
+.main-info-single span {
+    text-transform: uppercase;
+    font-weight: 200;
+    font-size: 0.8em;
+}
+
+.main-info-single h3 {
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+.main-info-single p {
+    text-transform: uppercase;
+    font-size: .8em;
+    margin-top: 3px;
+}
+
+.black-border {
+    border-left: black 8px solid;
+    border-radius: 4px;
+    margin-right: 1rem;
+}
+
