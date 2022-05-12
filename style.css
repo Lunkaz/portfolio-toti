@@ -38,6 +38,7 @@ h1 {
 h2 {
     font-size: 2.8em;
     font-weight: 600;
+    color: #fcd3de;
 }
 
 h3 {
@@ -138,7 +139,7 @@ header {
 
 #sobre h2 {
     font-weight: 600;
-    padding-top: 40px;
+    padding-top: 30px;
 }
 
 #sobre p {
@@ -177,6 +178,10 @@ header {
     padding: 40px 0;
 }
 
+#experiencia h2 {
+    color:#72a1e5
+}
+
 .main-info-single {
     display: flex;
     margin: 1.5rem 0;
@@ -213,6 +218,7 @@ header {
 
 #projectos h2 {
     padding: 40px 0;
+    color: #72a1e5;
 }
 
 #projectos h3 {
@@ -244,7 +250,7 @@ header {
 }
 
 .project-buttons a {
-    background-color: #9883e5;
+    background-color: #fcd3de;
     border: none;
     color: #fff4e4;
     padding: .5rem 0;
@@ -257,7 +263,7 @@ header {
     cursor: pointer;
 }
 
-#repo {
+.project-buttons .repo {
     background-color: #50C9CE;
 }
 
@@ -354,10 +360,11 @@ form button:hover, form button:focus {
 
 .contato-info a {
     color: white;
+    margin-top: 30px;
 }
 
-.icons-header a:nth-child(2n) {
-    margin: 0 20px;
+.contato-info .icons-header a:nth-child(2n) {
+    margin: 30px 40px;
 }
 
 .contato-info-text p {
