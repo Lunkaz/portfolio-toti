@@ -1,5 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,200;8..144,400;8..144,600&display=swap');
 
+/**
+PINK fcd3de
+GRAY 2e382e
+PURPLE 9883e5
+TURQUOISE 50c9ce
+LIGHTBLUE 72a1e5
+WHITE-ISH fff4e4 
+**/
 
 html {
 	box-sizing: border-box;
@@ -12,12 +20,14 @@ html {
 
 body {
 	margin: 0;
+    background-color: #ffffff;
 }
 
 /**-------TYPOS-------------**/
 
 h1, h2, h3 {
     margin: 0;
+    color: #9883e5;
 }
 
 h1 {
@@ -27,25 +37,39 @@ h1 {
 
 h2 {
     font-size: 2.8em;
+    font-weight: 600;
 }
 
 h3 {
     font-size: 2em;
 }
 
-/**-------CONTAINER----------**/
+p {
+    color: #2e382e;
+}
+
+a, button {
+    text-transform: uppercase;
+}
+
+/**-------CONTAINER---------- fcd3de PINK**/
 
 .container {
     max-width: 960px;
     margin: 0 auto;
+    padding: 0 20px;
 }
  
 /**-------NAV--------------**/
 
 nav {
-    background-color: darkgray;
+    background-color: rgb(46, 56, 46, .6);
     width: 100%;
+    position: fixed;
+    box-shadow: 0 0 10px black;
+    color: #fff4e4;
 }
+
 
 nav .container {
     display: flex;
@@ -54,13 +78,33 @@ nav .container {
 }
 
 nav a {
+    display: inline-block;
     text-decoration: none;
-    color: black;
     margin-left: 2rem;
+    color: #fff4e4;
+    text-transform: uppercase;
+    font-weight: 200;
 }
+
 nav a:focus, nav a:hover {
-    color: white;
+    color: #fcd3de;
 }
+
+nav a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: rgb(114, 161, 229, .8);
+    transition: width .3s;
+}
+
+nav a:hover::after {
+    width: 100%;
+    transition: width .3s
+}
+
+
 
 /**-----------HEADER---------**/
 
@@ -75,7 +119,7 @@ header {
 #sobre img {
     width: 250px;
     border-radius: 50%;
-    margin-top: 140px;
+    margin-top: -140px;
 }
 
 #sobre {
@@ -84,7 +128,6 @@ header {
 
 #sobre .sobre-info {
     max-width: 400px;
-    margin-top: 260px;
     margin-left: 3rem;
 }
 
@@ -109,6 +152,10 @@ header {
 	background-position: bottom;
 }
 
+#sobre a {
+    color: #50C9CE;
+}
+
 .icons-header {
     display: flex;
     place-content: space-around;
@@ -121,12 +168,12 @@ header {
 /**--------------FORMAÇÂO E EXPE------ **/
 
 #formacao {
-    background: yellow;
+    background: #50c9ce;
     padding: 50px 0;
 }
 
 #experiencia {
-    background: green;
+    background: #fcd3de;
     padding: 40px 0;
 }
 
@@ -153,15 +200,24 @@ header {
 }
 
 .black-border {
-    border-left: black 8px solid;
+    border-left: #2e382e 8px solid;
     border-radius: 4px;
     margin-right: 1rem;
 }
 
 /**-----------PROJECTOS-------**/
 
+#projectos {
+    padding-bottom: 40px;
+}
+
 #projectos h2 {
     padding: 40px 0;
+}
+
+#projectos h3 {
+    font-size: 1.2em;
+    padding: 12px 0;
 }
 
 #projectos .projectos-container {
@@ -172,10 +228,12 @@ header {
 }
 
 #projectos .projecto-single-container {
+    background-color: #ffffff;
     width: 280px;
     padding: 15px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     margin-bottom: 30px;
+    border-radius: 4px;
 }
 
 #projectos .projecto-single-container img {
@@ -185,16 +243,22 @@ header {
     
 }
 
-#projectos button {
-    background-color: #4CAF50; /* Green */
+.project-buttons a {
+    background-color: #9883e5;
     border: none;
-    color: white;
-    padding: 1rem;
+    color: #fff4e4;
+    padding: .5rem 0;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     width: 45%;
+    margin-top: 15px;
     border-radius: 6px;
+    cursor: pointer;
+}
+
+#repo {
+    background-color: #50C9CE;
 }
 
 .project-buttons {
@@ -206,9 +270,12 @@ header {
 /**---------CONTACT------**/
 
 #contato {
-    background: blue;
+    background: linear-gradient(rgb(0,0,0, 0.2),rgba(0,0,0, 0.3)), url('https://images.unsplash.com/photo-1508020963102-c6c723be5764?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80') fixed;
+	background-size: cover;
+	background-position: center;
     padding: 40px 0;
-}
+    color: #fff4e4;
+}   
 
 #contato h2 {
     padding-bottom: 20px;
@@ -227,18 +294,66 @@ form {
     width: 45%;
 }
 
+form label {
+    text-transform: uppercase;
+}
+
 #from, #reply, #message, #subject {
     display: flex;
     flex-direction: column;
+    padding-top: 10px;
+}
+
+input, textarea {
+    border: none;
+    padding: 5px;
+    border-radius: 4px;
+}
+
+#subject textarea {
+    height: 25px;
+}
+
+textarea {
+    resize: none;
+}
+
+input:focus, textarea:focus {
+    color: -internal-light-dark( white);
+    background-color: -internal-light-dark(rgb(255, 255, 255), rgb(255, 255, 255));
+}
+
+form .button {
+    text-align: center;
 }
 
 form button {
+    background-color: #72a1e5;
+    background-color: #9883e5;
+    border: none;
+    color: #fff4e4;
+    padding: .5rem 0;
     text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    width: 45%;
+    margin-top: 15px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+form button:hover, form button:focus {
+    background-color: #fcd3de;
+    color: #2e382e;
 }
 
 .contato-info-text .icons-header {
     margin: 0;
     place-content: start;
+}
+
+.contato-info a {
+    color: white;
 }
 
 .icons-header a:nth-child(2n) {
@@ -247,13 +362,27 @@ form button {
 
 .contato-info-text p {
     padding: 15px 0;
+    color: #fff4e4;
+}
+
+#contato h2 {
+    color: #72a1e5;
 }
 
 
 /**---------FOOTER----------**/
 
 footer {
-    background: red;
+    background: #72a1e5;
     text-align: center;
-    padding: 20px;
+    padding: 15px;
+}
+
+footer p {
+    font-weight: 600;
+}
+
+footer a {
+    text-decoration: none;
+    color: #fff4e4;
 }
