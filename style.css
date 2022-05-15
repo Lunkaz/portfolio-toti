@@ -125,6 +125,7 @@ header {
 
 #sobre {
     display: flex;
+    flex-wrap: wrap;
 }
 
 #sobre .sobre-info {
@@ -238,6 +239,7 @@ header {
     width: 280px;
     padding: 15px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    margin: 0 10px;
     margin-bottom: 30px;
     border-radius: 4px;
 }
@@ -290,6 +292,7 @@ header {
 .contato-info {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap
 }
 
 .contato-info-text {
@@ -392,4 +395,32 @@ footer p {
 footer a {
     text-decoration: none;
     color: #fff4e4;
+}
+
+@media (max-width: 960px) {
+
+    .main-info-single {
+        margin-left: 10%;
+    }
+    
+    #projectos h2, #formacao h2, #experiencia h2, #contato h2 {
+        text-align: center;
+    }
+    
+    #projectos .projectos-container {
+        justify-content: space-around;
+    }
+
+    .contato-info {
+        justify-content: center;
+    }
+
+    form {
+        width: 80%;
+    }
+
+    .contato-info-text {
+        width: 80%;
+    }
+
 }
